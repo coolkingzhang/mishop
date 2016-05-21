@@ -1,0 +1,5 @@
+com\mishop\item\center\dao\CountryMapper.class
+com\mishop\item\center\util\MyMapper.class
+com\mishop\item\center\dao\UserInfoMapper.class
+com\mishop\item\center\plugin\mybatis\PerformanceInterceptor.class
+com\mishop\item\center\dao\UserLoginInfoMapper.class
