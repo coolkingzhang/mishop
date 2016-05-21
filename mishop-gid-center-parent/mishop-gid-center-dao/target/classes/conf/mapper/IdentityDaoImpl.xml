@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.mishop.gid.center.dao.IdentityMapper">
+
+	<!-- <insert id="insert">
+		insert t_identity (id,system,sub_sys,module,table_name,identity,create_time,update_time)	
+		values (#{identity.id},#{identity.system},#{identity.subSys},#{identity.module},#{identity.table},#{identity.identity},#{identity.createTime},#{identity.updateTime})
+	</insert> -->
+
+	<select id="findIdentity" resultType="com.mishop.gid.center.common.model.Identity">
+		select id id,system system,sub_sys subSys,module module,table_name tableName,identity identity,create_time createTime,update_time updateTime 
+		from identity 
+		where system=#{system} and sub_sys=#{subSys} and module=#{module} and table_name=#{tableName}
+	</select>
+	
+	<update id="updateIdentity">
+		update identity set identity=#{newValue} where system=#{identity.system} and sub_sys=#{identity.subSys} and module=#{identity.module} and table_name=#{identity.tableName} and identity=#{exceptValue} 
+	</update>
+
+</mapper>	
