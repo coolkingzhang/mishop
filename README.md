@@ -7,7 +7,7 @@
         技术框架：
                 1：spring mvc + mybatis + redis +　ehcache
                 2: dubbo + elasticsearch + rabbitmq
-                3:
+                3:　swagger
         
         模块化：分为　前台　中台　后台
         
